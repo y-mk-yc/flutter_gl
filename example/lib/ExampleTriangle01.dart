@@ -289,7 +289,7 @@ void main() {
     gl.enableVertexAttribArray(a_Position);
 
     // Return number of vertices
-    return (vertices.length / dim).toInt();
+    return vertices.length ~/ dim;
   }
 
   initShaders(gl, vs_source, fs_source) {

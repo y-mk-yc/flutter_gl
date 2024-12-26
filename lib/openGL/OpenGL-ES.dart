@@ -27,7 +27,7 @@ class OpenGLES extends OpenGLBase {
 
   late LibOpenGLES _libOpenGLES;
   late LibEGL _libEGL;
-  dynamic? _gl;
+  dynamic _gl;
 
   dynamic get gl {
     _gl ??= getContext({"gl": _libOpenGLES});
