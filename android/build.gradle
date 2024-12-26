@@ -36,6 +36,8 @@ android {
     }
     defaultConfig {
         minSdkVersion 21
+        targetSdk 33
+        namespace 'com.flutter_gl'
     }
     lintOptions {
         disable 'InvalidPackage'
