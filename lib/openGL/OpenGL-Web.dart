@@ -1,6 +1,6 @@
-import 'dart:ui' as ui;
 import 'dart:html';
-
+import 'dart:ui'
+    as ui; // This is for platform views, make sure it doesn't conflict with other usages
 import './OpenGL-Base.dart';
 import 'opengl/OpenGLContextES.dart'
     if (dart.library.js) 'opengl/OpenGLContextWeb.dart';
@@ -43,12 +43,13 @@ class OpenGLWeb extends OpenGLBase {
 
     this.element = domElement;
 
+    // Register the platform view factory with the correct library import
     ui.platformViewRegistry.registerViewFactory(divId, (int viewId) {
       return domElement;
     });
   }
 
   makeCurrent(List<int> egls) {
-    // web no need do something
+    // No need for anything in web
   }
 }
